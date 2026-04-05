@@ -8,6 +8,7 @@ from django.contrib.auth.models import (
     PermissionsMixin
 )
 
+
 class Usermanager(BaseUserManager):
     """Manager for User."""
 
@@ -29,6 +30,7 @@ class Usermanager(BaseUserManager):
         user.save(using=self._db)
 
         return user
+
 
 class User(AbstractBaseUser, PermissionsMixin):
     """User in the system."""
